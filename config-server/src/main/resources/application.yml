@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+        #如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          uri: https://github.com/pusaman/testRepo
+          search-paths: respo
+          username:
+          password:
+          default-label: master
+      label: master
+server:
+  port: 8888
